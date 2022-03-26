@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>webpack starterkit</title>
+  <meta name="description" content="A light foundation for your next frontend project based on webpack.">
+</head>
+
+<body class="bg-bg text-azul font-montserrat">
+  <header
+    class="bg-gradient-to-r from-azul to-rojo h-[80px] lg:h-[120px] flex items-center px-5 xl:pl-32 gap-5 z-30 w-full rounded-b-3xl fixed left-0 top-0">
+    <img class="h-[40px] lg:h-[50px] order-2" src="images/logo-white.png" alt="Bold logo">
+    <div class="tham tham-e-slider tham-w-8 order-1 xl:hidden">
+      <div class="tham-box">
+        <div class="tham-inner bg-white" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <aside id="user-menu"
+      class="w-[260px] lg:w-[300px] bg-white h-screen fixed top-0 pl-5 pt-36 lg:pt-44 xl:pt-52 transition-all duration-300 -translate-x-full xl:translate-x-0 z-20">
+      <h2 class="text-xl lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-azul to-rojo">
+        Restaurante
+        Andrés</h2>
+      <nav class="mt-10 xl:mt-14">
+        <ul>
+          <li class="menu-item active-menu">
+            <a href="">
+              <b></b>
+              <b></b>
+              <span><img src="images/menu-home-icon.svg" alt="Menu home icon Bold"></span>
+              Inicio
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="">
+              <b></b>
+              <b></b>
+              <span><img src="images/menu-control-center-icon.svg" alt="Menu control center icon Bold"></span>
+              Centro de control
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="">
+              <b></b>
+              <b></b>
+              <span><img src="images/menu-my-account-icon.svg" alt="Menu my account icon Bold"></span>
+              Mi cuenta Bold
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="w-full absolute bottom-0 left-0 border-t border-bg h-32 flex items-center justify-center text-lg">
+        <a href="" class="flex items-center justify-center gap-4">
+          <img class="h-5" src="images/power.png" alt="Power icon Bold">
+          Cerrar sesión
+        </a>
+      </div>
+    </aside>
+    <section class="px-5 pt-28 lg:pt-40 pb-20 xl:pl-[325px]">
+      <div class="w-full max-w-[920px]">
+        <div class="bg-white grid grid-cols-2 rounded-[45px] py-1 px-1 text-center">
+          <a class="referred text-xl lg:text-2xl" href="">Invitar a un amigo</a>
+          <a class="referred active-referred text-xl lg:text-2xl flex items-center justify-center" href="">Tus
+            referidos</a>
+        </div>
+        <div class="white-section mt-9 md:mt-14 px-5 py-5">
+          <div class="bg-bg rounded-[14px] -mb-[120px] lg:-mb-[30px] relative z-10 md:h-[160px] lg:h-[180px]">
+            <div class="px-5 lg:px-7 pt-5 lg:pt-8">
+              <h3
+                class="text-xl lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r w-max from-azul to-rojo">
+                Amigos que <br>
+                han usado tu link
+              </h3>
+              <p class="text-rojo font-black text-6xl">3</p>
+            </div>
+            <div class="md:absolute md:bottom-0 md:right-10">
+              <img class="mx-auto md:h-[230px] lg:h-[260px]" src="images/hero-image.svg" alt="Hero image Bold">
+            </div>
+          </div>
+          <div class="overflow-y-scroll h-[350px] pt-[140px] lg:pt-12">
+            <table id="table" class="links-table">
+              <tr>
+                <th>Mail de tu amigo</th>
+                <th>Estado</th>
+                <th>Días para usar tu link</th>
+              </tr>
+              <tr>
+                <td>juliana.robledo@gmail.com</td>
+                <td>
+                  <div id="progress" class="relative flex items-center w-[92%] max-w-md">
+                    <div id="progress-bar" class="bg-gray-100 w-full absolute h-2 border border-gray-200 rounded-3xl">
+                    </div>
+                    <ul id="steps" class="grid grid-cols-3 gap-1 w-full">
+
+                      <li class="step loaded relative">
+
+                        <div class="tooltip lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-1.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya creó <br> su cuenta
+                            Bold</p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step current-step relative">
+
+                        <div class="tooltip left-[-40px]">
+                          <img class="h-[50px] mx-auto" src="images/step-2.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya compró <br> y
+                            vinculó su
+                            datáfono</p>
+                        </div>
+                        <div class="flex w-5 h-5 mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark relative">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative">
+                        <div class="tooltip left-[-80px]">
+                          <img class="w-12 mx-auto" src="images/step-3.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Ya puedes reclamar <br> tu premio
+                          </p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+                <td>20 días</td>
+              </tr>
+              <tr>
+                <td>andres.osorio@gmail.com</td>
+                <td>
+                  <div id="progress" class="relative flex items-center w-[92%] max-w-md">
+                    <div id="progress-bar" class="bg-gray-100 w-full absolute h-2 border border-gray-200 rounded-3xl">
+                    </div>
+                    <ul id="steps" class="grid grid-cols-3 gap-1 w-full">
+
+                      <li class="step loaded relative">
+
+                        <div class="tooltip lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-1.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya creó <br> su cuenta
+                            Bold</p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step loaded relative">
+
+                        <div class="tooltip left-[-40px]">
+                          <img class="h-[50px] mx-auto" src="images/step-2.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya compró <br> y
+                            vinculó su
+                            datáfono</p>
+                        </div>
+                        <div class="flex w-5 h-5 mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark relative">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative current-step">
+                        <div class="tooltip left-[-80px] lg:-left-[40px]">
+                          <img class="w-12 lg:w-[40px] mx-auto" src="images/step-3.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Ya puedes reclamar <br> tu premio
+                          </p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+                <td class="text-green-400">Completado</td>
+              </tr>
+              <tr>
+                <td>ingrid2235@gmail.com</td>
+                <td>
+                  <div id="progress" class="relative flex items-center w-[92%] max-w-md">
+                    <div id="progress-bar" class="bg-gray-100 w-full absolute h-2 border border-gray-200 rounded-3xl">
+                    </div>
+                    <ul id="steps" class="grid grid-cols-3 gap-1 w-full">
+
+                      <li class="step current-step relative">
+
+                        <div class="tooltip lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-1.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya creó <br> su cuenta
+                            Bold</p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative">
+
+                        <div class="tooltip left-[-40px]">
+                          <img class="h-[50px] mx-auto" src="images/step-2.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya compró <br> y
+                            vinculó su
+                            datáfono</p>
+                        </div>
+                        <div class="flex w-5 h-5 mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark relative">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative">
+                        <div class="tooltip left-[-80px] lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-3.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Ya puedes reclamar <br> tu premio
+                          </p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+                <td>3 días</td>
+              </tr>
+              <tr>
+                <td>andres.osorio.com</td>
+                <td>
+                  <div id="progress" class="relative flex items-center w-[92%] max-w-md">
+                    <div id="progress-bar" class="bg-gray-100 w-full absolute h-2 border border-gray-200 rounded-3xl">
+                    </div>
+                    <ul id="steps" class="grid grid-cols-3 gap-1 w-full">
+
+                      <li class="step loaded relative">
+
+                        <div class="tooltip lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-1.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya creó <br> su cuenta
+                            Bold</p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step current-step relative">
+
+                        <div class="tooltip left-[-40px]">
+                          <img class="h-[50px] mx-auto" src="images/step-2.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya compró <br> y
+                            vinculó su
+                            datáfono</p>
+                        </div>
+                        <div class="flex w-5 h-5 mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark relative">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative">
+                        <div class="tooltip left-[-80px] lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-3.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Ya puedes reclamar <br> tu premio
+                          </p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+                <td>3 días</td>
+              </tr>
+              <tr>
+                <td>juliana.robledo@gmail.com</td>
+                <td>
+                  <div id="progress" class="relative flex items-center w-[92%] max-w-md">
+                    <div id="progress-bar" class="bg-gray-100 w-full absolute h-2 border border-gray-200 rounded-3xl">
+                    </div>
+                    <ul id="steps" class="grid grid-cols-3 gap-1 w-full">
+
+                      <li class="step loaded relative">
+
+                        <div class="tooltip lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-1.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya creó <br> su cuenta
+                            Bold</p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step current-step relative">
+
+                        <div class="tooltip left-[-40px]">
+                          <img class="h-[50px] mx-auto" src="images/step-2.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Tu referido ya compró <br> y
+                            vinculó su
+                            datáfono</p>
+                        </div>
+                        <div class="flex w-5 h-5 mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark relative">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                      <li class="step relative">
+                        <div class="tooltip left-[-80px] lg:left-[-40px]">
+                          <img class="w-12 mx-auto" src="images/step-3.svg" alt="Paso uno Bold">
+                          <p class="text-griso text-center mt-2 text-xs lg:text-base">Ya puedes reclamar <br> tu premio
+                          </p>
+                        </div>
+                        <div class="flex w-5 h-5 relative mark-wrapper">
+                          <span class="pulse"></span>
+                          <span class="mark">
+                            <img src="images/check.png" alt="Check mark Bold">
+                          </span>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+                <td>20 días</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="mt-5 md:grid md:gap-5 md:grid-cols-[1fr,320px]">
+          <div class="white-section py-10 px-5">
+            <h2 class="font-extrabold text-xl lg:text-2xl text-azul text-center leading-[26px]">¡Impulsa a tus referidos
+              a <br>
+              completar el
+              proceso y gana!
+            </h2>
+            <div class="grid grid-cols-3 text-center lg:gap-[90px] mt-8 lg:mt-16 relative">
+              <div class="border-b border-grisc w-[70%] absolute top-6 left-0 right-0 ml-auto mr-auto"></div>
+              <div>
+                <div
+                  class="rounded-full border border-grisc h-[43px] w-[43px] lg:w-14 lg:h-14 h mx-auto mb-5 bg-white relative">
+                  <img class="mx-auto h-[50px] lg:h-[75px]" src="images/step-1.svg" alt="First step Bold">
+                </div>
+                <p class="leading-[22px]">Crear una Cuenta <br> Bold</p>
+              </div>
+              <div>
+                <div
+                  class="rounded-full border border-grisc h-[43px] w-[43px] lg:w-14 lg:h-14 mx-auto mb-5 bg-white relative">
+                  <img class="mx-auto h-12 lg:h-[62px]" src="images/step-2.svg" alt="Second step Bold">
+                </div>
+                <p class="leading-[22px]">Comprar y vincular el datáfono</p>
+              </div>
+              <div>
+                <div
+                  class="rounded-full border border-grisc h-[43px] w-[43px] lg:w-14 lg:h-14 mx-auto mb-5 bg-white relative">
+                  <img class="mx-auto h-12 lg:h-[58px]" src="images/step-3.svg" alt="Third step Bold">
+                </div>
+                <p class="leading-[22px]">¡Gana $50.000 y tu amigo $10.000!</p>
+              </div>
+            </div>
+          </div>
+          <div class="white-section mt-5 md:mt-0 pb-6 pt-4">
+            <div class="flip">
+              <div id="flip-move" class="flip-content">
+                <div class="flip-front relative px-5">
+                  <img class="h-5 absolute right-4 flip-trigger cursor-pointer" src="images/informacionblue.png"
+                    alt="Information Bold">
+                  <img class="h-32 mx-auto" src="images/step-3.svg" alt="Third step Bold">
+                  <h2 class="font-extrabold text-xl lg:text-2xl text-azul text-center leading-[26px] mt-4">Tus ganacias
+                    <br> por
+                    recomendar <br> este mes
+                  </h2>
+                  <p class="text-rojo text-[40px] font-black mt-2">$150.000</p>
+                  <small class="block leading-[18px] mt-2 text-base">Transfiere tu dinero <br> desde la app Bold</small>
+                </div>
+                <div class="flip-back">
+                  <img class="flip-trigger h-9 ml-4 cursor-pointer" src="images/back-icon.svg" alt="Back Bold">
+                  <h2 class="font-extrabold text-xl lg:text-2xl text-azul text-center leading-[26px] mt-3">Tus ganacias
+                    por <br>
+                    recomendar este mes</h2>
+                  <p class="text-rojo text-[40px] font-black">$150.000</p>
+                  <div class="px-5">
+                    <div class="pt-4 mt-2 border-t border-gray-200 text-left">
+                      <p class="text-griso leading-[22px]">
+                        Este es el dinero que ganas <br>
+                        cuando tus amigos completan <br>
+                        el proceso. Transfiere tu dinero <br>
+                        desde la app en "Mi cuenta Bold".
+                      </p>
+
+                    </div>
+                  </div>
+                  <div class="mt-4 px-3 text-left">
+                    <p class="flex items-center gap-2">
+                      <img class="h-12" src="images/play-icons.svg" alt="Play button Bold">
+                      <span class="font-bold">¿Cómo transfiero el dinero de mis ganancias?</span>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>
